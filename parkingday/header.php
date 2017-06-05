@@ -36,6 +36,9 @@
 
     <script>
 
+    /**
+     *  Mobile navigation: on mobile phones -> show hamburger icon 
+     */
     $(function() {
       $('#menu-toggle').on('click', function(e) {
         if(e) e.preventDefault();
@@ -43,6 +46,32 @@
         $('#menu').toggleClass('open');
       });
     });
+
+    /**
+     *  Navigation: scroll to site sections on click
+     */
+    $(function(){ 
+
+      var clickNavItem = function(e) {
+        // Make sure that the 'href' of <a href /> is ignored
+        // by preventing default behaviour
+        e.preventDefault();
+
+        // Get section based on the link you clicked on (<a data-section="sectionName" />)
+        var section = $(e.target).data('section');
+        // Find this section on the page (<div class="section-sectionName tailor-element" />)
+        var elementToScrollTo = $('.section-' + section);
+
+        // Now scroll to this section. 250 is the animation duration in milliseconds
+        $('html, body').animate({
+          scrollTop: elementToScrollTo.offset().top - 80
+        }, 250);
+      }
+
+      // If someone clicks on a .menu-item, execute the 'clickNavItem' function 
+      $('.menu-item').on('click', clickNavItem);
+
+    })
 
     </script>
 
@@ -62,8 +91,17 @@
       <div class="socials">
 
         <ul id="menu-nav">
-          <?php wp_nav_menu(); ?>
-          <?php /* wp_list_pages( '&title_li=' ); */ ?>
+          <div class="menu-menu-container">
+            <ul id="menu-menu" class="menu">
+
+              <li class="menu-item"><a data-section="landing">Welkom</a></li>
+              <li class="menu-item"><a data-section="route">De route</a></li>
+              <li class="menu-item"><a data-section="zo-werkt-het">Hoe werkt het?</a></li>
+              <li class="menu-item"><a data-section="workshops">Workshops</a></li>
+              <li class="menu-item"><a data-section="doe-mee">Doe mee!</a></li>
+
+            </ul>
+          </div>
         </ul>
 
         <div class="social-icons">
