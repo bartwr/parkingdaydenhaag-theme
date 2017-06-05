@@ -1,0 +1,260 @@
+/*
+Theme Name: ParkingdayDenHaag Theme
+Author: Janine Terlouw
+Author URI: http://www.janineterlouw.nl/
+Version: 1.0
+Text Domain: ParkingdayDenHaagTheme
+
+*/ 
+
+@font-face {
+  font-family: 'okomitomedium';
+  src: url('../font/okomito-medium-webfont.woff2') format('woff2'),
+       url('../font/okomito-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../font/GT-Pressura-Bold.woff') format('woff'),
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../font/GT-Pressura-Regular.woff') format('woff'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  font-family: "GT Pressura", sans-serif;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: bold !important;
+  margin: 0;
+
+} 
+
+h2 {
+  font-weight: normal !important;
+  font-size: 11px;
+  line-height: 0.2em;
+  margin: 0 auto;
+}
+
+h3 { 
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.4em;
+    margin: 0 auto;
+}
+
+
+a {
+  color: #05D57D;
+}
+
+a:hover {
+  color: #FFCD46;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.text-narrow {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-middle {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-blok-narrow {
+  max-width: 340px;
+  margin: 0 auto;
+} 
+
+.tailor-ui .tailor-row {  
+  margin-bottom: 0 !important;
+}
+
+.header-logo {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.map {
+  height: 800px;
+}
+
+/* ---- */
+/* PAGE */
+/* ---- */
+
+
+.header {
+    height: 50vh;
+}
+
+.signup-form button {
+    border: 1px solid #240029;
+    font-family: "GT Pressura";
+    background: rgb(255, 255, 255);
+    font-weight: normal;
+    padding: 10px 30px;
+}
+
+.wpcf7-submit {
+    border: none;
+    font-family: "GT Pressura";
+    background-color: #FFCD46;
+    font-weight: normal;
+    padding: 10px 30px;
+}
+
+
+.wpcf7-submit:hover {
+    border: none;
+    background-color: #05D57D;
+}
+
+.tailor-ui .wpcf7 input, .tailor-ui .wpcf7 select, .tailor-ui .wpcf7 textarea {
+    max-width: 100%;
+    margin: 10px;
+}
+
+.textarea {
+    font-size: 14px;
+}
+
+.div.wpcf7-mail-sent-ok {
+    border: 2px solid #05D57D;
+}
+
+.page-section { 
+  width: 100%;
+}
+
+.box-calendar {
+  padding: 25px !important;
+}
+
+
+
+
+/* ------ */
+/* FOOTER */
+/* ------ */
+
+
+
+/* ------- */
+/* OTHERS? */
+/* ------- */
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border-width: 0; 
+}
+
+
+/**
+ *  Tailor dingen
+ */
+
+/* Geef afbeeldingen 100% breedte, máár tekst max 300px */
+
+.tailor-map__canvas {
+  height: 400px !important;
+}
+
+.tailor-hero__content {
+  margin: 0 auto !important;
+  width: 90%;
+  max-width: 1280px;
+}
+
+@media (max-width: 480px) {
+  body .tailor-ui .tailor-hero {
+    padding: 1em;
+  }
+}
+
+.tailor-ui .tailor-hero, .tailor-ui .tailor-section {
+  margin-bottom: 0 !important;
+}
+
+
+@media only screen and (max-width: 720px) and (min-width: 300px) {
+  
+  .homeblock {
+    height:500px;
+  }
+
+  .tailor-ui .tailor-row {
+    flex-wrap: wrap;
+  } 
+
+  .tailor-ui .tablet-columns .tailor-column {
+    width: 100% !important;
+
+  }
+}
+
+@media only screen and (min-width: 321px) {
+.tailor-ui .tablet-columns .tailor-column>:last-child {
+    margin-bottom: 10px !important;
+}
+}
+
+
+@media (max-width: 480px) {
+
+  /* SMALLER TITLES */
+
+  body.tailor-ui .tailor-hero h1 {
+    font-size: 2em;
+    line-height: 44px;
+  }
+
+  /*
+   HIDE ADMINBAR ON MOBILE
+  */
+
+  #wpadminbar {
+    display: none !important;
+  }
+
+  #menu {
+    top: 0;
+  }
+
+  /* MAKE SPACING LEFT RIGHT SMALLER */
+  body.tailor-ui .tailor-hero {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+
+}
