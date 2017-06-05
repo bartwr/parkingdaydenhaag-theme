@@ -29,12 +29,28 @@ Text Domain: ParkingdayDenHaagTheme
   font-style: normal;
 }
 
+::-webkit-input-placeholder { /* Chrome */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #fff;
+}
 
 * {
   margin: 0;
   font-family: "GT Pressura", sans-serif;
   font-size: 18px;
   word-wrap: break-word;
+}
+
+*:focus {
+  outline: none;
 }
 
 html, body {

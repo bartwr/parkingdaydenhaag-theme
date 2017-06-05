@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/style.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/form.css" />
 
     <meta name="viewport" content="width=device-width">
 
